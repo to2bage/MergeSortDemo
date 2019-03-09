@@ -60,6 +60,19 @@ public class AlgoFrame extends JFrame {
 
             for (int i = 0; i < AlgoFrame.this.aData.length(); i++) {
 
+                if ( i >= AlgoFrame.this.aData.left && i <= AlgoFrame.this.aData.right) {
+                    AlgoVisHelper.setColor(g2d, Color.orange);
+                } else {
+                    AlgoVisHelper.setColor(g2d, Color.gray);
+                }
+
+                if ( i == AlgoFrame.this.aData.mi) {
+                    AlgoVisHelper.setColor(g2d, Color.magenta);
+                }
+                if ( i == AlgoFrame.this.aData.mj) {
+                    AlgoVisHelper.setColor(g2d, Color.BLUE);
+                }
+
                 AlgoVisHelper.fillRectangle(
                         g2d,
                         i * width,
